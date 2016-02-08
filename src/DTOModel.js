@@ -4,7 +4,7 @@
     } else if (typeof define === 'function') {
         define(factory);
     } else {
-        _.set(this, 'ru.etaranov', factory());
+        _.set(this, 'ru.etaranov.DTOModel', factory());
     }
 }(function () {
     var DTOModel = function (attributes) {
