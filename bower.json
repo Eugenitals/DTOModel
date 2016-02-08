@@ -1,0 +1,26 @@
+{
+  "name": "dto-model",
+  "version": "1.0.0",
+  "authors": [
+    "Evgenii Taranov <eugenitals@gmail.com>"
+  ],
+  "description": "Lightweight Backbone alternative for describe, serialize, deserialize JS objects",
+  "main": [
+    "src/DTOModel.js"
+  ],
+  "moduleType": [],
+  "keywords": [
+    "backbone-alternative"
+  ],
+  "license": "MIT",
+  "private": true,
+  "homepage": "https://github.com/Eugenitals/DTOModel",
+  "dependencies": {
+    "lodash": "^3"
+  },
+  "ignore": [
+    ".git",
+    ".gitignore",
+    "test"
+  ]
+}
