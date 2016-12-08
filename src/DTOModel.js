@@ -62,16 +62,18 @@
      * @param [merge] {Boolean} true to not reset missing attributes
      */
     DTOModel.prototype.set = function (attributes, merge) {
+        var self = this;
+
         if (merge) {
             _.forOwn(attributes, function (_value, _key) {
-                this[ _key ] = attributes[ _key ];
-            }, this);
+                self[ _key ] = attributes[ _key ];
+            });
         }
 
         else {
-            _.forOwn(this.defaults, function (_defaultValue, _key) {
-                this[ _key ] = attributes[ _key ] !== undefined ? attributes[ _key ] : _defaultValue;
-            }, this);
+            _.forOwn(self.defaults, function (_defaultValue, _key) {
+                self[ _key ] = attributes[ _key ] !== undefined ? attributes[ _key ] : _defaultValue;
+            });
         }
     };
 
@@ -101,14 +103,15 @@
 
     // Return a model's attributes described in "defaults" block.
     DTOModel.prototype.toJSON = function () {
+        var self = this;
         var json = {};
 
         _.keys(this.defaults)
             .forEach(function (key) {
-                if (_.has(this, key)) {
-                    json[ key ] = this[ key ];
+                if (self[key]) {
+                    json[key] = self[key];
                 }
-            }, this);
+            });
 
         return json;
     };

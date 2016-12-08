@@ -16,7 +16,7 @@
   "private": true,
   "homepage": "https://github.com/Eugenitals/DTOModel",
   "dependencies": {
-    "lodash": "^3"
+    "lodash": "^4"
   },
   "ignore": [
     ".git",
